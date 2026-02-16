@@ -1,0 +1,16 @@
+{
+  "name": "nice-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass --watch sass/main.scss styles/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}
