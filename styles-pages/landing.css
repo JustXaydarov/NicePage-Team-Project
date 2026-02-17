@@ -124,6 +124,7 @@ ul li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: -70px;
 }
 
 .card1 {
@@ -220,16 +221,16 @@ ul li {
 
 .agency-section__grid {
     display: grid;
-    /* 1200px container uchun 3 ta 380px lik ustun va 30px masofa */
-    grid-template-columns: repeat(3, 380px); 
-    justify-content: center; /* Gridni container o'rtasiga suradi */
+    /* 1200px container uchun: 380px * 3 + 30px * 2 gap = 1200px */
+    grid-template-columns: repeat(3, 380px);
     gap: 30px;
+    justify-content: center;
     grid-template-areas: 
         "img1 planning img3"
         "buildings img2 projects";
 }
 
-/* Har bir elementning xaritadagi o'rni */
+/* Grid Area bog'lanmalari */
 .agency-section__item--img1      { grid-area: img1; }
 .agency-section__item--buildings { grid-area: buildings; }
 .agency-section__item--planning  { grid-area: planning; }
@@ -237,45 +238,78 @@ ul li {
 .agency-section__item--img3      { grid-area: img3; }
 .agency-section__item--projects  { grid-area: projects; }
 
-/* Umumiy item stili */
+/* Umumiy element stili */
 .agency-section__item {
-    border-radius: 25px;
+    border-radius: 30px;
     overflow: hidden;
-    width: 380px; /* Card width 380px-400px atrofida */
+    width: 380px;
 }
 
-/* Rasmlar balandligini kamaytirish */
+/* SIZ AYTGAN ASOSIY 3 TA RASM (Height: 450px) */
+.agency-section__item--main-img {
+    height: 450px;
+}
+
 .agency-section__img {
     width: 100%;
-    height: 350px; /* Rasmlar balandligini kiyraytirdik */
+    height: 100%;
     object-fit: cover;
     display: block;
 }
 
-/* Matnli cardlar uchun maxsus (Rangi: #ddd) */
+/* MATNLI KARTALAR (Height: 350px, Color: #ddd) */
 .agency-section__item--text {
-    background-color: #ddd; /* Siz aytgan rang */
-    padding: 40px 30px;
-    min-height: 300px; /* Matnli cardlar balandligi */
+    background-color: #F2F2F2;
+    padding: 40px;
+    height: 350px; /* Matnli kartalar balandligi */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
 }
 
-/* Ikonka va matnlar */
+/* Ikonka va matn o'lchamlari */
 .agency-section__icon {
-    width: 45px;
+    width: 80px;
+    margin-top: -20px;
     margin-bottom: 20px;
 }
 
+.agency-section {
+    margin-top: 200px;
+}
+
 .agency-section__card-title {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 15px;
     color: #333;
+    font-family: "Montserrat";
+    font-weight: 500;
 }
 
 .agency-section__card-desc {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #555;
+    font-size: 15px;
+    font-family: "Montserrat";
+    line-height: 2.1;
+    color: #444;
+}
+
+.large-img {
+    margin-top: -100px;
+}
+
+.Architectural {
+    font-size: 70px;
+    position: relative;
+    top: -150px;
+    text-align: center;
+}
+
+.archittectural-subtitle {
+    font-size: 18px;
+    position: relative;
+    top: -130px;
+    text-align: center;
+    font-family: "Montserrat";
+
 }
