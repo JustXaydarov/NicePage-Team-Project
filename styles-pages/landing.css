@@ -3,8 +3,10 @@
   --primary-color: #1a1a1a;       /* To'q qora/kulrang (matnlar va sarlavhalar uchun) */
   --accent-color: #f1c40f;        /* Urg'u beruvchi sariq yoki tilla rang (tugmalar uchun) */
   --secondary-color: #8d8d8d;     /* Yordamchi kulrang (kichik matnlar uchun) */
-  --bg-light: #ffffff;            /* Asosiy fon rangi */
+  --bg-light: #F0F4F8;            /* Asosiy fon rangi */
+  --white-color: #fff;
   --bg-dark: #111111;             /* To'q bloklar uchun fon */
+  --border-color: #D9D9D9;
 
   /* Shriftlar (Typography) */
   --base-font-size: 16px;
@@ -25,7 +27,7 @@
 }
 
 @font-face {
-  font-family: "Montserrat" ,sans-serif;
+  font-family: "Montserrat";
   src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
 
@@ -58,5 +60,222 @@ ul li {
 }
 
 .container  {
-  max-width: var(--container-width-big);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.hero-section {
+    background-color: #F0F4F8;
+    height: 700px;
+}
+
+.hero-title {
+    font-size: 60px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    text-align: center;
+    text-align-last: center;
+    gap: 20px;
+    font-weight: 440;
+    position: relative;
+    top: 100px;
+    font-family: "Montserrat";
+    line-height: 2;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-button {
+    width: 200px;
+    height: 55px;
+    border-radius: 30px;
+    padding: 10px 18px;
+    position: relative;
+    top: 160px;
+    left: 480px;
+    border: 2px solid #7A9CBD;
+    font-weight: 520;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background-color: #7A9CBD;
+    color: var(--bg-light);
+}
+
+.hero-core img{
+    width: 100%;
+    object-fit: cover;
+    height: 700px;
+    position: relative;
+    top: 250px;
+    border-radius: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card1 {
+    height: 400px;
+    border: 3px solid var(--border-color);
+    border-radius: 40px;
+    padding: 30px 30px;
+    
+}
+
+.card-section {
+    margin-top: 700px;
+}
+
+.card-button {
+    width: 120px;
+    height: 60px;
+    background-color: transparent;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    border: 2px solid #7A9CBD;
+    margin-top: 50px;
+    transition: 0.2s;
+}
+
+.card-button:hover {
+    background-color: #7A9CBD;
+    color: var(--bg-light);
+}
+
+.card-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.card-subtitle {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #808080;
+    line-height: 2.0;
+}
+
+.ourstory {
+    width: 100%;
+    height: 700px;
+    background-color: #F0F4F8;
+    margin-top: 70px;
+}
+
+.right-story-page img{
+    width: 500px;
+    height: 500px;
+    margin-top: 100px;
+    border-radius: 30px;
+}
+
+.left-story-page {
+    position: relative;
+    left: 650px;
+    top: -450px;
+}
+
+.our-story-title {
+    font-size: 50px;
+}
+
+.left-story-subtitile {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 2.0;
+    font-family: "Montserrat";
+    margin-top: 20px;
+}
+
+.ourstory-btn {
+    width: 230px;
+    height: 60px;
+    border-radius: 30px;
+    padding: 20px 40px;
+    border: 2px solid #7A9CBD;
+    background-color: transparent;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    transition: 0.2s;
+}
+
+.ourstory-btn:hover{
+    background-color: #7A9CBD;
+    color: var(--bg-light);
+}
+
+.agency-section__grid {
+    display: grid;
+    /* 1200px container uchun 3 ta 380px lik ustun va 30px masofa */
+    grid-template-columns: repeat(3, 380px); 
+    justify-content: center; /* Gridni container o'rtasiga suradi */
+    gap: 30px;
+    grid-template-areas: 
+        "img1 planning img3"
+        "buildings img2 projects";
+}
+
+/* Har bir elementning xaritadagi o'rni */
+.agency-section__item--img1      { grid-area: img1; }
+.agency-section__item--buildings { grid-area: buildings; }
+.agency-section__item--planning  { grid-area: planning; }
+.agency-section__item--img2      { grid-area: img2; }
+.agency-section__item--img3      { grid-area: img3; }
+.agency-section__item--projects  { grid-area: projects; }
+
+/* Umumiy item stili */
+.agency-section__item {
+    border-radius: 25px;
+    overflow: hidden;
+    width: 380px; /* Card width 380px-400px atrofida */
+}
+
+/* Rasmlar balandligini kamaytirish */
+.agency-section__img {
+    width: 100%;
+    height: 350px; /* Rasmlar balandligini kiyraytirdik */
+    object-fit: cover;
+    display: block;
+}
+
+/* Matnli cardlar uchun maxsus (Rangi: #ddd) */
+.agency-section__item--text {
+    background-color: #ddd; /* Siz aytgan rang */
+    padding: 40px 30px;
+    min-height: 300px; /* Matnli cardlar balandligi */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ikonka va matnlar */
+.agency-section__icon {
+    width: 45px;
+    margin-bottom: 20px;
+}
+
+.agency-section__card-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.agency-section__card-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
 }
