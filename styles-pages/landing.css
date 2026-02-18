@@ -94,7 +94,7 @@ ul {
      
     }
 
-a:focus {
+.list a:focus {
           color: #7a9cbd;
           text-decoration: underline;
           text-decoration-color: #7a9cbd;
@@ -102,7 +102,7 @@ a:focus {
           text-underline-offset: 12px;
         }
 
-         a {
+        .list a {
         text-decoration: none;
         color: #333;
         font-size: 17px;
@@ -114,7 +114,7 @@ a:focus {
         
       }
 
-          a:hover {
+         .list a:hover {
           text-decoration: underline;
           text-decoration-color: #7a9cbd;
           text-decoration-thickness: 1.9px;
@@ -593,6 +593,7 @@ a:focus {
     line-height: 1.5;
     margin-bottom: 25px;
     color: #333;
+    font-family: "Montserrat";
 }
 
 .contact-singular__phone-wrapper {
@@ -615,9 +616,7 @@ a:focus {
 /* Pastki blok */
 .contact-singular__bottom {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    gap: 50px;
 }
 
 .contact-singular__title-col {
@@ -630,6 +629,8 @@ a:focus {
     line-height: 1.1;
     color: #111;
     font-weight: 500;
+    position: relative;
+    left: 130px;
 }
 
 .contact-singular__text-col {
@@ -660,4 +661,7 @@ a:focus {
     background-color: #478ac9;
     color: #fff;
 }
+
+
+
 
