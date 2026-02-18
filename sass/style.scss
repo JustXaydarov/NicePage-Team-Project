@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -6,15 +6,8 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family:
-    open sans,
-    sans-serif;
-}
-
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
+html {
+  font-family: 'Montserrat';
 }
 
 nav {
@@ -22,36 +15,59 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+}
 
-  ul {
-    display: flex;
-    list-style: none;
+ul {
+  display: flex;
+  list-style: none;
+}
 
-    li {
-      margin-left: 20px;
+li {
+  margin-left: 20px;
+}
 
-      a {
-        text-decoration: none;
-        color: #333;
-        font-size: 17px;
-        font-weight: 700;
-        transition: color 0.3s;
+.list a:focus {
+  color: #7a9cbd;
+  text-decoration: underline;
+  text-decoration-color: #7a9cbd;
+  text-decoration-thickness: 1.9px;
+  text-underline-offset: 12px;
+}
 
-        &:hover {
-          text-decoration: underline;
-          text-decoration-color: #7a9cbd;
-          text-decoration-thickness: 1.9px;
-          text-underline-offset: 12px;
-        }
+.list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  font-weight: 700;
+  transition: color 0.3s;
+}
 
-        &:focus {
-          color: #7a9cbd;
-          text-decoration: underline;
-          text-decoration-color: #7a9cbd;
-          text-decoration-thickness: 1.9px;
-          text-underline-offset: 12px;
-        }
-      }
-    }
-  }
+.list a:hover {
+  text-decoration: underline;
+  text-decoration-color: #7a9cbd;
+  text-decoration-thickness: 1.9px;
+  text-underline-offset: 12px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+.hero-container{
+  text-align: center;
+  position: relative;
+}
+
+.hero-image-container{
+  width: 100%;
+  height: 400px;
+  background-color: #F0F4F8;
+}
+
+.hero-image img{
+  width: 100px;
+  height: auto;
+  position: absolute;
 }
