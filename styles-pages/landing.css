@@ -563,10 +563,11 @@ ul li {
 }
 
 .contact-singular__main-title {
-    font-size: 55px;
-    font-family: serif; /* Rasmdagi klassik shrift */
+    font-size: 40px;
+    font-family: "Montserrat"; 
     line-height: 1.1;
     color: #111;
+    font-weight: 500;
 }
 
 .contact-singular__text-col {
