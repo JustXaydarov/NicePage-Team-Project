@@ -272,7 +272,7 @@ ul {
 .why__content {
   width: 421px;
   height: 420px;
-  padding-top: 50px;
+  padding-top: 120px;
 }
 .why__content .why__title {
   font-size: 50px;
@@ -302,11 +302,17 @@ ul {
   color: #fff;
 }
 
+.why__card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
 .why__card {
   width: 324px;
   height: 326px;
   padding: 30px;
-  border-radius: 40px;
+  border-radius: 30px;
   border: 3px solid #D9D9D9;
 }
 .why__card .why__card-title {
@@ -319,6 +325,277 @@ ul {
   font-weight: 400;
   color: #808080;
   line-height: 35px;
+  padding-bottom: 25px;
+}
+.why__card .why__button {
+  padding: 18px 39px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  border: 2px solid #7a9cbd;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.why__card .why__button:hover {
+  background-color: #7a9cbd;
+  color: #fff;
+}
+
+.problem-solving-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+.problem-solving-section .layout-grid {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.problem-solving-section .image-wrapper {
+  flex: 1;
+}
+.problem-solving-section .image-wrapper img {
+  width: 530px;
+  height: 657px;
+  border-radius: 30px;
+  display: block;
+  object-fit: cover;
+}
+.problem-solving-section .text-wrapper {
+  flex: 1;
+}
+.problem-solving-section .text-wrapper .main-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111111;
+  margin: 0 0 10px 0;
+}
+.problem-solving-section .text-wrapper .image-source {
+  font-size: 14px;
+  color: #111111;
+  margin-bottom: 40px;
+}
+.problem-solving-section .text-wrapper .image-source a {
+  color: inherit;
+  text-decoration: underline;
+}
+.problem-solving-section .text-wrapper .features-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.problem-solving-section .text-wrapper .features-column .feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.problem-solving-section .text-wrapper .features-column .feature-card .icon-circle {
+  min-width: 70px;
+  height: 70px;
+  background-color: #d1e3f3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.problem-solving-section .text-wrapper .features-column .feature-card .icon-circle img {
+  width: 40px;
+  height: 40px;
+}
+.problem-solving-section .text-wrapper .features-column .feature-card .feature-info h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 500;
+  color: #111111;
+  padding-bottom: 20px;
+}
+.problem-solving-section .text-wrapper .features-column .feature-card .feature-info p {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.6;
+  color: #111111;
+  margin: 0;
+}
+
+.testimonials-slider {
+  padding: 100px 0;
+  background-color: #f0f4f8;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+.testimonials-slider .slider-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonials-slider .slider-title {
+  font-family: Georgia, serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: #111111;
+  padding-bottom: 50px;
+}
+.testimonials-slider .slider-viewport {
+  position: relative;
+  padding: 0 40px;
+}
+.testimonials-slider .slider-track {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+.testimonials-slider .slider-track::-webkit-scrollbar {
+  display: none;
+}
+.testimonials-slider .testimonial-card {
+  flex: 0 0 350px;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonials-slider .testimonial-card .quote-circle {
+  width: 65px;
+  height: 65px;
+  background-color: #f0f4f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.testimonials-slider .testimonial-card .quote-circle img {
+  width: 35px;
+  height: 35px;
+}
+.testimonials-slider .testimonial-card p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #333333;
+  padding-bottom: 25px;
+}
+.testimonials-slider .testimonial-card h4 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.testimonials-slider .nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 45px;
+  height: 45px;
+  background-color: #adc9e3;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.testimonials-slider .nav-arrow.prev-arrow {
+  left: 60px;
+}
+.testimonials-slider .nav-arrow.next-arrow {
+  right: 70px;
+}
+.testimonials-slider .nav-arrow:hover {
+  background-color: #8da9c4;
+}
+
+.unique__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.unique__title-wrapper .unique__title {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.unique__content .unique__text {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 30px;
+  padding-bottom: 30px;
+}
+
+.unique__button {
+  padding: 22px 57px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  border: 2px solid #7a9cbd;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.unique__button:hover {
+  background-color: #7a9cbd;
+  color: #fff;
+}
+
+.hero, .performance {
+  height: auto !important;
+  min-height: 586px;
+  padding-bottom: 100px;
+}
+
+.healthy {
+  position: relative;
+  z-index: 1;
+}
+.healthy::before {
+  height: 100% !important;
+}
+
+.footer {
+  background-color: #333333;
+  padding: 70px 0;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  display: block;
+  clear: both;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.footer__text {
+  font-size: 17px;
+  margin: 0;
+}
+.footer__credits {
+  font-size: 14px;
+}
+.footer__credits .footer__link {
+  color: #adc9e3;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

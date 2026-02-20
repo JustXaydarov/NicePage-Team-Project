@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -34,7 +32,7 @@
             <div class="container">
 
                 <div class="hero__image-wrapper">
-                    <div class="hero__image-container">
+                    <div class="hero__image-container" data-aos="zoom-in">
                         <img class="hero__image" src="./assets/png/hero_section_banner.jpg"
                             alt="Architect designing blueprint">
                     </div>
@@ -43,11 +41,11 @@
 
                 <div class="hero__content">
 
-                    <h1 class="hero__title">
+                    <h1 class="hero__title" data-aos="fade-right">
                         Designing spaces that inspire
                     </h1>
 
-                    <p class="hero__text">
+                    <p class="hero__text" data-aos="fade-left">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         nullam nunc justo sagittis suscipit ultrices.
                         Excepteur sint occaecat <br> cupidatat non proident, sunt
@@ -67,7 +65,7 @@
                 <div class="performance__container container">
 
                     
-                    <div class="performance__card">
+                    <div class="performance__card" data-aos="zoom-in">
 
                         <img class="performance__card-image" src="./assets/png/clayd_card.jpg"
                             alt="One Bishopsgate Plaza">
@@ -112,11 +110,11 @@
                 <div class="healthy__container container">
             
                     <div class="healthy__content">
-                        <h2 class="healthy__title">
+                        <h2 class="healthy__title" data-aos="zoom-in">
                             We create healthy buildings
                         </h2>
                         
-                        <p class="healthy__text">
+                        <p class="healthy__text" data-aos="zoom-in">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit
                             nullam nunc justo <br> sagittis suscipit ultrices.
                             Images from
@@ -125,20 +123,20 @@
                     </div>
 
                     <div class="healthy__cards">
-                        <div class="healthy__card">
+                        <div class="healthy__card" data-aos="fade-up">
                             <img src="./assets/png/design_img.jpg" alt="design_img">
                             <h2>design</h2>
                             <p>Suspendisse vulputate eros in velit  fermentum cursus. Nulla fringilla justo  tellus, at sodales eros
                                 laoreet a.  Quisque
                                 facilisis lorem augue, sit </p>
                         </div>
-                        <div class="healthy__card">
+                        <div class="healthy__card" data-aos="fade-up">
                             <img src="./assets/png/Research_img.jpg" alt="Research_img">
                             <h2>Research</h2>
                             <p>Suspendisse vulputate eros in velit fermentum cursus. Nulla fringilla justo tellus, at sodales eros laoreet a. Quisque
                             facilisis lorem augue, sit </p>
                         </div>
-                        <div class="healthy__card">
+                        <div class="healthy__card" data-aos="fade-up">
                             <img src="./assets/png/Strategy_img.jpg" alt="Strategy_img">
                             <h2>Strategy</h2>
                             <p>Suspendisse vulputate eros in velit  fermentum cursus. Nulla fringilla justo  tellus, at sodales eros
@@ -198,6 +196,51 @@
                             </button>
             
                         </div>
+                        <div class="why__card">
+            
+                            <h3 class="why__card-title">
+                                Sample Headline
+                            </h3>
+            
+                            <p class="why__card-text">
+                                Ut enim ad minim veniam, quis <br> nostrud exercitation ullamco <br> laboris
+                            </p>
+            
+                            <button class="why__button">
+                                MORE
+                            </button>
+            
+                        </div>
+                        <div class="why__card">
+            
+                            <h3 class="why__card-title">
+                                Sample Headline
+                            </h3>
+            
+                            <p class="why__card-text">
+                                Ut enim ad minim veniam, quis <br> nostrud exercitation ullamco <br> laboris
+                            </p>
+            
+                            <button class="why__button">
+                                MORE
+                            </button>
+            
+                        </div>
+                        <div class="why__card">
+            
+                            <h3 class="why__card-title">
+                                Sample Headline
+                            </h3>
+            
+                            <p class="why__card-text">
+                                Ut enim ad minim veniam, quis <br> nostrud exercitation ullamco <br> laboris
+                            </p>
+            
+                            <button class="why__button">
+                                MORE
+                            </button>
+            
+                        </div>
             
                     </div>
             
@@ -205,8 +248,163 @@
             
             </section>
 
+            <section class="problem-solving-section">
+                <div class="container">
+                    <div class="layout-grid">
+            
+                        <div class="image-wrapper">
+                            <img src="./assets/png/dom.jpg"
+                                alt="Building">
+                        </div>
+            
+                        <div class="text-wrapper" data-aos="zoom-in">
+                            <h2 class="main-heading">We are passionate about solving problems</h2>
+                            <p class="image-source">Image from <a href="#">Freepik</a></p>
+            
+                            <div class="features-column" >
+            
+                                <div class="feature-card">
+                                    <div class="icon-circle">
+                                        <img src="./assets/png/Curiosity_icon.png" alt="">
+                                    </div>
+                                    <div class="feature-info">
+                                        <h3>Curiosity</h3>
+                                        <p>Sample text. Click to select the Text Element. Lorem ipsum dolor sit amet</p>
+                                    </div>
+                                </div>
+            
+                                <div class="feature-card">
+                                    <div class="icon-circle">
+                                        <img src="./assets/png/Collaboration_icon.png" alt="">
+                                    </div>
+                                    <div class="feature-info">
+                                        <h3>Collaboration</h3>
+                                        <p>Sample text. Click to select the Text Element. Lorem ipsum dolor sit amet</p>
+                                    </div>
+                                </div>
+            
+                                <div class="feature-card">
+                                    <div class="icon-circle">
+                                        <img src="./assets/png/community_icon.png" alt="">
+                                    </div>
+                                    <div class="feature-info">
+                                        <h3>Community</h3>
+                                        <p>Sample text. Click to select the Text Element. Lorem ipsum dolor sit amet</p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials-slider">
+                <div class="slider-container">
+                    <h2 class="slider-title">Read what our customers say</h2>
+            
+                    <div class="slider-viewport">
+                        <button class="nav-arrow prev-arrow">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+                            </svg>
+                        </button>
+            
+                        <div class="slider-track">
+                            <div class="testimonial-card">
+                                <div class="quote-circle">
+                                    <img src="./assets/png/icon.png" alt=" quote icon">
+                                </div>
+                                <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi
+                                    morbi tempus.</p>
+                                <h4>CELIA ALMEDA</h4>
+                            </div>
+            
+                            <div class="testimonial-card">
+                                <div class="quote-circle">
+                                    <img src="./assets/png/icon.png" alt=" quote icon">
+                                </div>
+                                <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi
+                                    morbi tempus.</p>
+                                <h4>FRANK KINNEY</h4>
+                            </div>
+            
+                            <div class="testimonial-card">
+                                <div class="quote-circle">
+                                    <img src="./assets/png/icon.png" alt=" quote icon">
+                                </div>
+                                <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi
+                                    morbi tempus.</p>
+                                <h4>SAM PERRY</h4>
+                            </div>
+            
+                            <div class="testimonial-card">
+                                <div class="quote-circle">
+                                    <img src="./assets/png/icon.png" alt=" quote icon">
+                                </div>
+                                <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi
+                                    morbi tempus.</p>
+                                <h4>MARRY HOPE</h4>
+                            </div>
+                        </div>
+            
+                        <button class="nav-arrow next-arrow">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="unique">
+            
+                <div class="container unique__container">
+            
+                    <!-- TITLE -->
+                    <div class="unique__title-wrapper">
+                        <h2 class="unique__title">
+                            We create unique, <br> singular spaces
+                        </h2>
+                    </div>
+            
+                    <!-- TEXT + BUTTON -->
+                    <div class="unique__content">
+                        <p class="unique__text">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <br> eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, <br> sunt in culpa qui officia deserunt mollit anim id est
+                            laborum.
+                        </p>
+                        
+                        <button class="unique__button">
+                            Learn more
+                        </button>
+                    </div>
+
+            
+                </div>
+            
+            </section>
+
     </main>
 
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__text">Sample text. Click to select the Text Element.</p>
+            
+            <div class="footer__credits">
+                This site was created with the 
+                <a href="https://nicepage.com" class="footer__link" target="_blank">Nicepage</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({duration: 1200});
+    </script>
 
 
 </body>
