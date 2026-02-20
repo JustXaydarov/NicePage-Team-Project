@@ -298,7 +298,7 @@ ul {
 .why__content{
   width: 421px;
   height: 420px;
-  padding-top: 50px;
+  padding-top: 120px;
 
   .why__title{
     font-size: 50px;
@@ -333,11 +333,17 @@ ul {
   }
 }
 
+.why__card-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
 .why__card{
   width: 324px;
   height: 326px;
   padding: 30px;
-  border-radius: 40px;
+  border-radius: 30px;
   border: 3px solid #D9D9D9;
 
   .why__card-title{
@@ -351,7 +357,494 @@ ul {
     font-weight: 400;
     color: #808080;
     line-height: 35px;
+    padding-bottom: 25px;
   }
 
+  .why__button{
+    padding: 18px 39px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    border: 2px solid #7a9cbd;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
+    &:hover {
+      background-color: #7a9cbd;
+      color: #fff;
+    }
+  }
+}
+
+.problem-solving-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: sans-serif;
+
+  
+
+  .layout-grid {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+   
+  }
+
+  .image-wrapper {
+    flex: 1;
+    img {
+      width: 530px;
+      height: 657px;
+      border-radius: 30px;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  .text-wrapper {
+    flex: 1;
+
+    .main-heading {
+      font-family: 'Playfair Display', Georgia, serif; // Serif shrift
+      font-size: 45px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #111111;
+      margin: 0 0 10px 0;
+    }
+
+    .image-source {
+      font-size: 14px;
+      color: #111111;
+      margin-bottom: 40px;
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+
+    .features-column {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .feature-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+
+        .icon-circle {
+          min-width: 70px;
+          height: 70px;
+          background-color: #d1e3f3; // Lokal rang
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img{
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .feature-info {
+          h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 27px;
+            font-weight: 500;
+            color: #111111;
+            padding-bottom: 20px;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 1.6;
+            color: #111111;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.testimonials-slider {
+  padding: 100px 0;
+  background-color: #f0f4f8; // Umumiy och ko'k fon
+  overflow: hidden; // Slider chetdan chiqib ketmasligi uchun
+  font-family: 'Segoe UI', sans-serif;
+
+  .slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .slider-title {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #111111;
+    padding-bottom: 50px;
+  }
+
+  .slider-viewport {
+    position: relative;
+    padding: 0 40px; // Tugmalar uchun joy
+  }
+
+  .slider-track {
+    display: flex;
+    gap: 25px;
+    // Bu qism kartalarning bir qismi kesilib ko'rinishini ta'minlaydi
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    padding: 20px 0;
+
+    &::-webkit-scrollbar {
+      display: none; // Skrollbarni yashirish
+    }
+  }
+
+  .testimonial-card {
+    // Har bir karta kengligi: 3 tadan ko'p sig'ishi va oxirgisi kesilishi uchun
+    flex: 0 0 350px; 
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .quote-circle {
+      width: 65px;
+      height: 65px;
+      background-color: #f0f4f8;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+
+        img {
+          width: 35px;
+          height: 35px;
+        }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      color: #333333;
+      padding-bottom: 25px;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #111111;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  // Navigatsiya tugmalari
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    background-color: #adc9e3;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    &.prev-arrow { left: 60px; }
+    &.next-arrow { right: 70px; }
+
+    &:hover {
+      background-color: #8da9c4;
+    }
+  }
+}
+
+.unique__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+}
+
+.unique__title-wrapper{
+  .unique__title{
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+}
+
+.unique__content{
+  .unique__text{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    padding-bottom: 30px;
+  }
+
+}
+
+.unique__button{
+  padding: 22px 57px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  border: 2px solid #7a9cbd;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+
+  &:hover {
+    background-color: #7a9cbd;
+    color: #fff;
+  }
+}
+
+
+
+
+
+
+
+// 1. Sectionlarga qat'iy balandlik bermang, aks holda kontent sig'may qoladi
+.hero, .performance {
+    height: auto !important; // auto bo'lsa ichidagi rasmga qarab o'zi kengayadi
+    min-height: 586px; 
+    padding-bottom: 100px; // Rasm pastki qismga urilib qolmasligi uchun
+}
+
+// 2. Healthy bo'limidagi absolutni to'g'irlash
+.healthy {
+    position: relative;
+    z-index: 1;
+    &::before {
+        height: 100% !important; // 680px emas, hamma kartalarni yopsin
+    }
+}
+
+// 3. Footer stili (Rasmga 100% mos)
+.footer {
+    background-color: #333333;
+    padding: 70px 0;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    position: relative; // Absolute emas, relative bo'lishi shart!
+    display: block;
+    clear: both; // Yuqoridagi sectionlardan qochish uchun
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: 17px;
+        margin: 0;
+    }
+
+    &__credits {
+        font-size: 14px;
+        .footer__link {
+            color: #adc9e3;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 575px) {
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero__title {
+    font-size: 30px !important;
+    padding: 20px 0;
+  }
+
+  .hero__text {
+    font-size: 15px !important;
+    line-height: 26px;
+  }
+
+  .hero__button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+
+  .performance__container,
+  .healthy__cards,
+  .why__container,
+  .unique__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 15px;
+  }
+
+  .performance__card,
+  .healthy__card,
+  .why__card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 280px;
+  }
+
+  .nav-arrow {
+    display: none;
+  }
+
+  .footer {
+    padding: 30px 0;
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .hero__text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .performance__card,
+  .healthy__card,
+  .why__card {
+    width: 100%;
+  }
+
+  .testimonial-card {
+    flex: 0 0 300px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .hero__title {
+    font-size: 42px;
+  }
+
+  .performance__container,
+  .healthy__cards,
+  .why__container,
+  .unique__container {
+    gap: 40px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 320px;
+  }
+
+  .problem-solving-section .layout-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .why__card-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .hero__title {
+    font-size: 42px;
+  }
+
+  .performance__container,
+  .healthy__cards,
+  .why__container,
+  .unique__container {
+    gap: 40px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 320px;
+  }
+
+  .problem-solving-section .layout-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .why__card-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .hero__image-container img,
+  .performance__card,
+  .healthy__card,
+  .why__card,
+  .testimonial-card {
+    width: 90%;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 26px;
+  }
+
+  .hero__title {
+    font-size: 54px;
+  }
 }
