@@ -1,0 +1,171 @@
+@media (max-width: 768px) {
+    ul li {
+        display: none;
+    }
+
+    .container {
+        max-width: 340px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu img{
+        width: 25px;
+    }
+
+    .hero-title {
+        font-size: 35px;
+        font-family: "san-serif";
+    }
+
+    .hero-subtitle {
+        text-align: center;
+        text-align-last: center;
+    }
+
+    .hero-button {
+        display: block;
+    }
+
+    .hero-core {
+        display: none;
+    }
+
+    .hero-core {
+        display: none;  /* Kichik ekranda asosiy rasm yashiriladi */
+    }
+
+    .hero-core1 {
+        display: block; /* Kichik ekranda responsive rasm ko'rinadi */
+        margin-top: 70px;
+        overflow: hidden;
+    }
+
+    /* Rasm hajmini moslashtirish uchun qo'shimcha kod */
+    .hero-core1 img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .cards {
+        margin-top: -570px;
+    }
+
+    .ourstory .container {
+        flex-direction: column; /* Telefonda rasm tepada, matn pastda bo'ladi */
+        text-align: center;
+    }
+    
+    .left-story-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Telefonda tugmani ham markazga oladi */
+    }
+
+    .right-story-page img {
+        left: 0px;
+    }
+
+    .our-story-title {
+        font-size: 40px;
+        font-family: "sans-serif";
+        margin-left: -180px;
+    }
+
+    .left-story-subtitile {
+        text-align-last: left;
+        text-align: left;
+    }
+
+    .ourstory-btn {
+        position: relative;
+        left: -53px;
+    }
+
+    .agency-section__grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "img1"
+            "planning"
+            "img3"
+            "buildings"
+            "img2"
+            "projects";
+    }
+    
+    /* Balandliklarni moslashtiramiz */
+    .agency-section__item--main-img {
+        height: 300px;
+    }
+    
+    .agency-section__item--text {
+        height: auto;
+        min-height: 250px;
+    }
+
+    .agency-section__grid {
+        grid-template-columns: 1fr;
+        /* Telefonda hamma element ketma-ket (pastma-past) turadi */
+        grid-template-areas: 
+            "img1"
+            "buildings"
+            "planning"
+            "img2"
+            "img3"
+            "projects";
+    }
+
+    .large-img {
+    margin-top: 0px;
+}
+
+    .agency-section__card-title {
+        position: relative;
+        left: -20px;
+    }
+
+    .agency-section__item--projects img {
+         position: relative;
+        left: -20px;
+    }
+
+    .agency-section__card-desc {
+         position: relative;
+        left: -20px;
+    }
+
+    .agency-section__item--planning img {
+          position: relative;
+        left: -20px;
+    }
+
+    .agency-section__item--buildings img{
+          position: relative;
+        left: -20px;
+    }
+
+    .Architectural {
+        font-size: 34px;
+        font-family: "san-serif";
+    }
+
+    .archittectural-subtitle {
+        font-size: 14px;
+        line-height: 2.0;
+        margin-bottom: -70px;
+    }
+
+    .agency-section__item {
+        width: 340px;
+        border-radius: 30px;
+    }
+
+    .testimonials__title {
+        font-size: 40px;
+        font-family: "sans-serif";
+    }
+
+}

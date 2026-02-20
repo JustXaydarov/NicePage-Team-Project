@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
     <link rel="stylesheet" href="./styles-pages/landing.css">
+    <link rel="stylesheet" href="./styles-pages/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body>
@@ -20,6 +21,9 @@
             <li class="list"><a href="ourteam.html">OUR TEAM</a></li>
             <li class="list"><a href="./landing.html">LANDING</a></li>
         </ul>
+        <div class="menu">
+            <img src="./landing-page images/menu.png" alt="menu">
+        </div>
     </nav>
 </header>
     <main>
@@ -32,6 +36,9 @@
                 <button class="hero-button">LEARN MORE</button>
                 <div class="hero-core">
                     <img src="./landing-page images/hero-core img.jpg" alt="hero img">
+                </div>
+                 <div class="hero-core1">
+                    <img src="./landing-page images/hero-img-responsive.jpg" alt="hero img">
                 </div>
 
             </div>
@@ -94,7 +101,7 @@
             <div class="agency-section__item agency-section__item--main-img agency-section__item--img1">
                 <img src="./landing-page images/cards img 1 building.jpg" alt="building" class="agency-section__img">
             </div>
-            <div class="agency-section__item agency-section__item--text agency-section__item--buildings">
+            <div class="agency-section__item agency-section__item--text agency-section__item--buildings 2-rasim">
                 <img src="./landing-page images/card-include-img/1.png" alt="icon" class="agency-section__icon">
                 <h3 class="agency-section__card-title">Buildings</h3>
                 <p class="agency-section__card-desc">Lorem ipsum dolor sit amet,<Br> consectetur adipiscing elit, sed do<br> eiusmod tempor incididunt ut labore et <br>dolore magna aliqua</p>
@@ -123,7 +130,8 @@
 <section class="testimonials">
     <div class="container">
         <h2 class="testimonials__title">Read what our customers say</h2>
-        
+           <div class="splide__track">
+      <ul class="splide__list">
         <div class="testimonials__grid">
             <div class="testimonials__card">
                 <img src="./landing-page images/date.png" alt="quote" class="testimonials__icon">
@@ -435,7 +443,6 @@
   </div>
 </section>
     </main>
-<footer>
     <footer class="site-footer">
     <div class="footer-container">
         <h2 class="footer-title">Contact Us</h2>
@@ -475,9 +482,26 @@
         </div>
 
         <p class="footer-copy">Images from <strong>Freepik</strong></p>
+        
     </div>
+    <section class="map-section">
+    <div class="map-section__container">
+        <iframe 
+            class="map-section__iframe"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d193486.23232816995!2d-73.975411!3d40.735132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2z0JzQsNC90YXRjdGC0YLQtdC9LCDQndGM0Y4t0JnQvtGA0Lo!5e0!3m2!1sru!2sus!4v1771579328795!5m2!1sru!2sus" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    
+    <div class="map-section__content">
+        <p class="map-section__text">Sample text. Click to select the Text Element.</p>
+        <p class="map-section__text1">This site was created with <a href="#">Nicepage</a></p>
+    </div>
+</section>
 </footer>
-</footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
     <script src="./js/script.js"></script>

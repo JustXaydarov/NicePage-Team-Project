@@ -84,7 +84,7 @@ nav {
 ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 15px;
   
   }
 
@@ -92,6 +92,10 @@ ul {
       margin-left: 20px;
 
      
+    }
+
+    .hero-core1 {
+        display: none;
     }
 
 .list a:focus {
@@ -184,7 +188,7 @@ ul {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    
     gap: 30px;
     margin-top: -70px;
 }
@@ -230,25 +234,36 @@ ul {
     color: #808080;
     line-height: 2.0;
 }
-
 .ourstory {
     width: 100%;
-    height: 700px;
+    /* height: 700px; o'rniga padding ishlatsak, kontentga qarab o'zi kengayadi */
     background-color: #F0F4F8;
     margin-top: 70px;
+    padding: 70px 0; /* Ichki bo'shliq */
 }
 
-.right-story-page img{
-    width: 500px;
-    height: 500px;
-    margin-top: 100px;
+/* Container ichini flex qilamiz */
+.ourstory .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Rasm va matn orasidagi masofa */
+    flex-wrap: wrap; /* Ekran toraysa matn pastga tushadi */
+}
+
+.right-story-page img {
+    width: 100%;
+    max-width: 500px; /* Kattalashib ketmasligi uchun */
+    height: auto;     /* Rasm proporsiyasini saqlash uchun */
     border-radius: 30px;
+    display: block;
+    position: relative;
+    left: -100px;
 }
 
 .left-story-page {
-    position: relative;
-    left: 650px;
-    top: -450px;
+    position: static; /* position va top/left ni o'chirib tashlaymiz */
+    max-width: 500px;
 }
 
 .our-story-title {
@@ -259,7 +274,7 @@ ul {
     font-size: 17px;
     font-weight: 400;
     line-height: 2.0;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     margin-top: 20px;
 }
 
@@ -267,31 +282,33 @@ ul {
     width: 230px;
     height: 60px;
     border-radius: 30px;
-    padding: 20px 40px;
+    /* padding: 20px 40px; Bu tugma ichini buzishi mumkin, shuning uchun display flex qo'shish kerak */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid #7A9CBD;
     background-color: transparent;
     font-weight: 600;
     letter-spacing: 2px;
     margin-top: 30px;
     transition: 0.2s;
+    cursor: pointer;
 }
 
-.ourstory-btn:hover{
+.ourstory-btn:hover {
     background-color: #7A9CBD;
     color: var(--bg-light);
 }
-
 .agency-section__grid {
     display: grid;
-    /* 1200px container uchun: 380px * 3 + 30px * 2 gap = 1200px */
-    grid-template-columns: repeat(3, 380px);
+    /* 380px o'rniga minmax ishlatamiz, bu gridni buzmaydi */
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
     gap: 30px;
     justify-content: center;
     grid-template-areas: 
         "img1 planning img3"
         "buildings img2 projects";
 }
-
 /* Grid Area bog'lanmalari */
 .agency-section__item--img1      { grid-area: img1; }
 .agency-section__item--buildings { grid-area: buildings; }
@@ -299,6 +316,14 @@ ul {
 .agency-section__item--img2      { grid-area: img2; }
 .agency-section__item--img3      { grid-area: img3; }
 .agency-section__item--projects  { grid-area: projects; }
+
+.agency-section__item {
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%; /* 380px o'rniga 100% */
+}
+
+
 
 /* Umumiy element stili */
 .agency-section__item {
@@ -752,6 +777,7 @@ ul {
   border-radius: 40px;
   padding: 50px 50px;
   margin: 15px; /* Slaydlar orasidagi masofa uchun */
+  margin-left: -15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
   width: 280px;
@@ -925,11 +951,16 @@ ul {
     color: #fff;
     text-align: center;
     font-family: 'Arial', sans-serif;
+    height: 670px;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.menu {
+    display: none;
 }
 
 .footer-title {
@@ -1032,5 +1063,55 @@ ul {
     margin-top: 50px;
     font-size: 17px;
     opacity: 0.9;
+}
+
+/* Asosiy blok */
+.map-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+
+/* Karta konteyneri */
+.map-section__container {
+    width: 100%;
+    line-height: 0;
+}
+
+/* Iframe (karta) */
+.map-section__iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block; /* Bu iframe ostidagi ortiqcha bo'shliqni yo'qotadi */
+}
+
+/* Matnli qora fon */
+.map-section__content {
+    background-color: #333333;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    margin-top: -50px;
+}
+
+/* Matn stillari */
+.map-section__text {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 14px;
+    position: relative;
+    top: 80px;
+}
+
+.map-section__text1 {
+    font-size: 10px;
+    margin-top: 150px;
+}
+
+.map-section__text1 a {
+    color: #9AC8DA;
+    text-decoration: underline;
 }
 
