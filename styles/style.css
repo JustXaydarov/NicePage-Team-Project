@@ -24,7 +24,7 @@ nav {
 ul {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 30px;
 }
 
 .list a:focus {
@@ -168,10 +168,22 @@ ul {
   color: #fff;
 }
 
-.healthy {
+.healthy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 610px;
+  height: 680px;
   background-color: #f0f4f8;
+  z-index: -1;
+  border-radius: 40px 40px 0 0;
+}
+
+.healthy {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
 }
 .healthy .healthy__content {
   text-align: center;
@@ -232,8 +244,48 @@ ul {
 .healthy__button-wrapper {
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 .healthy__button-wrapper .healthy__button {
+  padding: 22px 57px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  padding-bottom: 20px;
+  text-decoration: none;
+  border: 2px solid #7a9cbd;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.healthy__button-wrapper .healthy__button:hover {
+  background-color: #7a9cbd;
+  color: #fff;
+}
+
+.why__container {
+  display: flex;
+  gap: 100px;
+}
+
+.why__content {
+  width: 421px;
+  height: 420px;
+  padding-top: 50px;
+}
+.why__content .why__title {
+  font-size: 50px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+.why__content .why__text {
+  font-size: 19px;
+  color: #111111;
+  line-height: 33px;
+  padding-bottom: 50px;
+}
+.why__content .why__link {
   padding: 22px 57px;
   font-size: 16px;
   font-weight: 600;
@@ -245,9 +297,27 @@ ul {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.healthy__button-wrapper .healthy__button:hover {
+.why__content .why__link:hover {
   background-color: #7a9cbd;
   color: #fff;
+}
+
+.why__card {
+  width: 324px;
+  height: 326px;
+  padding: 30px;
+  border-radius: 40px;
+  border: 3px solid #D9D9D9;
+}
+.why__card .why__card-title {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 35px;
+}
+.why__card .why__card-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #808080;
 }
 
 /*# sourceMappingURL=style.css.map */
