@@ -168,4 +168,86 @@ ul {
   color: #fff;
 }
 
+.healthy {
+  width: 100%;
+  height: 610px;
+  background-color: #f0f4f8;
+}
+.healthy .healthy__content {
+  text-align: center;
+}
+.healthy .healthy__content .healthy__title {
+  font-size: 50px;
+  font-weight: 500;
+  padding: 20px;
+}
+.healthy .healthy__content .healthy__text {
+  font-size: 17px;
+  color: #111111;
+  line-height: 33px;
+}
+.healthy .healthy__content .healthy__text .healthy__link {
+  color: #111111;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 1px; /* qalinligi */
+  text-underline-offset: 4px; /* pastga tushirish */
+}
+.healthy .healthy__content .healthy__text .healthy__link:hover {
+  text-decoration-color: red;
+}
+
+.healthy__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding-top: 50px;
+}
+
+.healthy__card {
+  width: 380px;
+  height: 520px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 29px;
+}
+.healthy__card img {
+  width: 320px;
+  height: 232px;
+  border-radius: 30px;
+}
+.healthy__card h2 {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 30px;
+}
+.healthy__card p {
+  font-size: 17px;
+  color: #111111;
+  line-height: 33px;
+}
+
+.healthy__button-wrapper {
+  text-align: center;
+  padding-top: 50px;
+}
+.healthy__button-wrapper .healthy__button {
+  padding: 22px 57px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  border: 2px solid #7a9cbd;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.healthy__button-wrapper .healthy__button:hover {
+  background-color: #7a9cbd;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */

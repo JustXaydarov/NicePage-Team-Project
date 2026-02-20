@@ -132,29 +132,29 @@ ul {
     border-top-right-radius: 40px;
   }
 
-  .performance__card-title{
+  .performance__card-title {
     font-size: 22px;
     font-weight: 600;
     padding: 30px;
   }
 
-  .performance__card-text{
+  .performance__card-text {
     font-size: 18px;
     font-weight: 500;
     color: #111111;
   }
 }
 
-.performance__content{
+.performance__content {
   padding: 32px;
 
-  .performance__title{
+  .performance__title {
     font-size: 43px;
     font-weight: 600;
     padding-bottom: 30px;
   }
 
-  .performance__text{
+  .performance__text {
     font-size: 18px;
     font-weight: 500;
     color: #111111;
@@ -162,7 +162,101 @@ ul {
     padding-bottom: 55px;
   }
 
-  .performance__button{
+  .performance__button {
+    padding: 22px 57px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    border: 2px solid #7a9cbd;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #7a9cbd;
+      color: #fff;
+    }
+  }
+}
+
+.healthy {
+  width: 100%;
+  height: 610px;
+  background-color: #f0f4f8;
+
+  .healthy__content {
+    text-align: center;
+
+    .healthy__title {
+      font-size: 50px;
+      font-weight: 500;
+      padding: 20px;
+    }
+
+    .healthy__text {
+      font-size: 17px;
+      color: #111111;
+      line-height: 33px;
+
+      .healthy__link {
+        color: #111111;
+        font-weight: 400;
+        text-decoration: underline;
+        text-decoration-thickness: 1px; /* qalinligi */
+        text-underline-offset: 4px; /* pastga tushirish */
+      }
+
+      .healthy__link:hover {
+        text-decoration-color: red;
+      }
+    }
+  }
+}
+
+
+.healthy__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding-top: 50px;
+}
+
+.healthy__card{
+  width: 380px;
+  height: 520px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 29px;
+
+
+  img{
+    width: 320px;
+    height: 232px;
+    border-radius: 30px;
+  }
+
+  h2{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 30px;
+  }
+
+  p{
+    font-size: 17px;
+    color: #111111;
+    line-height: 33px;
+  }
+}
+
+.healthy__button-wrapper {
+  text-align: center;
+  padding-top: 50px;
+
+  .healthy__button {
     padding: 22px 57px;
     font-size: 16px;
     font-weight: 600;
