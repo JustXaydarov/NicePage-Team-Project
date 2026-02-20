@@ -25,7 +25,7 @@ nav {
 ul {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 15px;
 }
 
 .list a:focus {
@@ -350,5 +350,6 @@ ul {
     font-size: 16px;
     font-weight: 400;
     color: #808080;
+    line-height: 35px;
   }
 }
