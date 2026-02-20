@@ -24,7 +24,7 @@ nav {
 ul {
   display: flex;
   list-style: none;
-  gap: 35px;
+  gap: 33px;
 }
 
 .list a:focus {
