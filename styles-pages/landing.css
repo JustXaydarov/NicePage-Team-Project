@@ -135,6 +135,10 @@ ul {
     height: 700px;
 }
 
+.hero-button-resp {
+    display: none;
+}
+
 .hero-title {
     font-size: 60px;
     text-align: center;
@@ -822,6 +826,10 @@ ul {
   transition: fill 0.3s;
 }
 
+.hero-subtitle-resp {
+    display: none;
+}
+
 .team-card__social-link:hover .team-card__icon {
   fill: #555;
 }
@@ -834,7 +842,6 @@ ul {
   height: 50px !important;
 }
 
-/* Asosiy Konteyner */
 .genesis-story {
   padding: 80px 0;
   max-width: 1200px;
@@ -936,15 +943,16 @@ ul {
   color: #1a1a1a;
 }
 
+.genesis-story__chronicle-resp {
+    display: none;
+}
+
 .site-footer {
-    /* Sen bergan background yo'li va gradient */
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                 url('../assets/png/footer-background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Rasm qimirlamay turishi uchun, yanada zo'r ko'rinadi */
-    
-    /* Heightni padding orqali kattalashtirdik */
+    background-attachment: fixed; 
     padding: 50px 20px 60px 20px; 
     color: #fff;
     text-align: center;
@@ -969,13 +977,12 @@ ul {
     font-family: "sans-serif";
 }
 
-/* Form elementlari */
 .footer-form {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-bottom: 100px; /* Kartalardan uzoqlashtirish uchun */
+    margin-bottom: 100px; 
     flex-wrap: wrap;
     color: #7D7D7D;
 }
@@ -996,7 +1003,7 @@ ul {
 }
 
 .f-submit {
-    background-color: rgb(162, 172, 190);
+    background-color: #9DB7D1;
     color: #fff;
     border: none;
     padding: 14px 50px;
@@ -1011,7 +1018,6 @@ ul {
     background-color: #7a9cbd;
 }
 
-/* Kartalar stili */
 .footer-cards {
     display: flex;
     justify-content: center;
@@ -1021,9 +1027,9 @@ ul {
 }
 
 .info-card {
-    background-color: #f1f4f9; /* Rasmdagi och kulrang/oq rang */
+    background-color: #f1f4f9; 
     padding: 30px 25px;
-    border-radius: 50px; /* Rasmdagi juda yumshoq burchaklar */
+    border-radius: 50px; 
     width: 350px;
     min-height: 150px;
     text-align: left;
@@ -1044,7 +1050,7 @@ ul {
 }
 
 .card-head h3 {
-    color: #7390a5; /* Rasmdagi ko'kimtir sarlavha rangi */
+    color: #7390a5; 
     margin: 0;
     font-size: 20px;
     letter-spacing: 1px;
@@ -1063,7 +1069,6 @@ ul {
     opacity: 0.9;
 }
 
-/* Asosiy blok */
 .map-section {
     width: 100%;
     margin: 0;
@@ -1071,21 +1076,18 @@ ul {
     margin-top: 15px;
 }
 
-/* Karta konteyneri */
 .map-section__container {
     width: 100%;
     line-height: 0;
 }
 
-/* Iframe (karta) */
 .map-section__iframe {
     width: 100%;
     height: 450px;
     border: none;
-    display: block; /* Bu iframe ostidagi ortiqcha bo'shliqni yo'qotadi */
+    display: block; 
 }
 
-/* Matnli qora fon */
 .map-section__content {
     background-color: #333333;
     text-align: center;
@@ -1094,7 +1096,6 @@ ul {
     margin-top: -50px;
 }
 
-/* Matn stillari */
 .map-section__text {
     color: #ffffff;
     font-family: sans-serif;

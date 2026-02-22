@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles-pages/landing.css">
     <link rel="stylesheet" href="./styles-pages/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
@@ -29,12 +30,16 @@
     <main>
         <section class="hero-section">
             <div class="container">
-                <p class="hero-title">Architecture Bureau</p>
-                <p class="hero-subtitle">
+                <p class="hero-title" data-aos="fade-right" data-aos-delay="1000" data-aos-easing="ease-out">Architecture Bureau</p>
+                <p class="hero-subtitle" data-aos="fade-left" data-aos-delay="1100" data-aos-easing="ease-out">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices. Excepteur sint occaecat <br>cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
+                   <p class="hero-subtitle-resp">
+                    Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit nullam <Br>nunc justo sagittis suscipit<br> ultrices.Excepteur sint occaecat <br>cupidatat non proident, sunt in <Br>culpa qui officia deserunt mollit <Br>anim id est laborum.
+                </p>
                 <button class="hero-button">LEARN MORE</button>
-                <div class="hero-core">
+                <button class="hero-button-resp">LEARN MORE</button>
+                <div class="hero-core" data-aos="zoom-in" data-aos-delay="3000" data-aos-easing="ease-out">
                     <img src="./landing-page images/hero-core img.jpg" alt="hero img">
                 </div>
                  <div class="hero-core1">
@@ -192,14 +197,14 @@
 </section>
 <section class="projects-section">
     <div class="projects-section__header">
-        <h2 class="projects-section__title">900 Residential Projects</h2>
+        <h2 class="projects-section__title" data-aos="zoom-in" data-aos-duration="300" data-aos-easing="ease-out">900 Residential Projects</h2>
         <h2 class="projects-section__title-resp">900 <Br>Residential <Br>Projects</h2>
         <p class="projects-section__subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
     </div>
 
-    <div class="projects-section__grid">
+    <div class="projects-section__grid" data-aos="zoom-in" data-aos-duration="800" data-aos-easing="ease-out">
         <div class="projects-section__card">
             <div class="projects-section__img-holder">
                 <img src="./landing-page images/cards-core/img1.jpg" alt="img1" class="projects-section__img">
@@ -414,6 +419,9 @@
       <p class="genesis-story__chronicle">
         Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit, sed do eiusmod tempor incididunt ut labore et <br>dolore magna aliqua. Ut enim ad minim veniam,<Br> quis nostrud exercitation ullamco laboris nisi ut <br>aliquip ex ea commodo consequat.
       </p>
+       <p class="genesis-story__chronicle-resp">
+        Lorem ipsum dolor sit amet, <Br>consectetur adipiscing elit, sed do <br>eiusmod tempor incididunt ut labore<Br> et dolore magna aliqua. Ut enim ad <br>minim veniam, quis nostrud<Br> exercitation ullamco laboris nisi ut <br>aliquip ex ea commodo consequat.
+      </p>
       <button class="genesis-story__action-link">LEARN MORE</button>
     </div>
 
@@ -504,6 +512,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="./js/script.js"></script>
+  
 </body>
 </html>

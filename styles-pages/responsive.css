@@ -18,15 +18,45 @@
     .hero-title {
         font-size: 35px;
         font-family: "san-serif";
+        top: 55px;
+        position: relative;
+    }
+
+    .hero-subtitle-resp {
+        text-align: center;
+        text-align-last: center;
+        font-size: 19px;
+        display: block;
+        position: relative;
+        top: 90px;
+        
+        font-family: "Montserrat";
+        line-height: 2.0;
+
     }
 
     .hero-subtitle {
-        text-align: center;
-        text-align-last: center;
+        display: none;
     }
 
     .hero-button {
+        display: none;
+    }
+
+    .hero-button-resp {
         display: block;
+        width: 200px;
+        height: 55px;
+        border-radius: 30px;
+        padding: 10px 18px;    
+        position: relative;
+        top: 160px;
+        left: 480px;
+        border: 2px solid #7A9CBD;
+        font-weight: 520;
+        font-size: 14px;
+        outline: none;
+        transition: 0.2s;
     }
 
     .hero-core {
@@ -238,40 +268,218 @@
         text-align: right;
     }
     
-    .projects-section__title-resp {
-        font-size: 40px;
-        font-weight: 500;
-        margin-top: -30px;
-        font-family: "san-serif";
-        display: block;
+    .projects-section {
+        padding: 40px 0px;
+        background-color: #F2F2F2; /* Orqa fon kulrang bo'lishi uchun */
     }
 
+    /* Katta sarlavhani yashirib, responsive variantini ko'rsatamiz */
     .projects-section__title {
         display: none;
     }
 
-    .projects-section__subtitle {
-        font-size: 20px;
-        line-height: 2.0;
+    .projects-section__title-resp {
+        display: block;
+        font-size: 38px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        line-height: 1.1;
+        text-align: center;
     }
 
-    .projects-section__title {
-        display: none; /* Katta sarlavhani yashiramiz */
+    /* Gridni bitta ustunga o'tkazamiz */
+    .projects-section__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Kartani rasmga moslab oq va yumaloq qilamiz */
+    .projects-section__card {
+        background-color: #ffffff; 
+        border-radius: 40px; /* Burchaklar rasmda juda yumaloq */
+        overflow: hidden;
+        padding-bottom: 40px; /* Pastki qismdagi masofa */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .projects-section__img-holder {
+        width: 100%;
+        height: auto; /* Rasm o'z holicha chiqishi uchun */
+        margin-bottom: 25px;
+        height: 370px;
+    }
+
+    .projects-section__img {
+        width: 100%;
+        display: block;
+    }
+
+    /* Matnlarni markazga olamiz */
+    .projects-section__card-title {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 15px;
+        font-family: "san-serif";
     }
     
-    .projects-section__title-resp {
-        display: block; /* Mobil sarlavhani ko'rsatamiz */
+
+    .projects-section__card-text {
+        font-size: 18px;
+        text-align: center;
+        line-height: 1.6;
+        padding: 0 30px;
+        color: #333;
     }
 
-    .projects-section__grid {
-        grid-template-columns: 1fr; /* 1 ta ustun */
+    .contact-singular {
+        padding: 60px 20px;
+    }
+
+    /* 1. Tepangi qismni (rasm va telefon) tartibga solamiz */
+    .contact-singular__top {
+        flex-direction: column; /* Ustma-ust tushishi uchun */
+        gap: 30px;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+    .contact-singular__img-wrapper {
+        margin: 0 auto; /* Rasmni markazga olamiz */
+        left: 0; /* Desktopdagi surilishni bekor qilamiz */
+        top: 0;
+    }
+
+    .contact-singular__info {
+        left: 0; /* Desktopdagi surilishni bekor qilamiz */
+        max-width: 100%;
+    }
+
+    .contact-singular__lead {
+        font-size: 20px; /* Mobilga moslashtirilgan o'lcham */
+        br {
+            display: none; /* Matndagi qatordan tushishlarni olib tashlaymiz */
+        }
+    }
+
+    .contact-singular__phone-wrapper {
+        justify-content: center; /* Ikonka va raqamni markazga olamiz */
+    }
+
+    .contact-singular__phone {
+        font-size: 32px;
+    }
+
+    /* 2. Pastki qismni (sarlavha va tekst) tartibga solamiz */
+    .contact-singular__bottom {
+        flex-direction: column;
+        margin-top: 60px;
         gap: 40px;
+        text-align: center;
     }
 
-    .projects-section__card {
-        max-width: 450px;
+    .contact-singular__main-title {
+        font-size: 32px;
+        font-family: "san-serif";
+        text-align-last: left;
+        text-align: left;
+        left: 1px;
+    }
+
+    .contact-singular__description {
+        left: 0; /* Desktopdagi -100px surilishni bekor qilamiz */
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: left;
+        text-align-last: left;
+        color: #111;
+    }
+
+    .contact-singular__button {
+        left: -65px; /* Desktopdagi -100px surilishni bekor qilamiz */
+        max-width: 250px;
+        height: 60px;
         margin: 0 auto;
     }
+
+    .team-section__title {
+        font-family: "sans-serif";
+        font-size: 40px;
+    }
     
-    
+    .genesis-story {
+    padding: 40px 20px;
+  }
+
+  .genesis-story__vessel {
+    flex-direction: column; /* Elementlarni ustma-ust qo'yish */
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .genesis-story__headline {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .genesis-story__chronicle-resp {
+    font-size: 17px;
+    text-align: center;
+    display: block;
+    text-align: left;
+    text-align-last: left;
+    line-height: 2.0;
+    font-family: "Montserrat";
+    position: relative;
+    left: -10px;
+  }
+
+  /* Tugmani markazga keltirish */
+  .genesis-story__action-link {
+    display: block;
+    position: relative;
+    left: -10px;
+    top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .genesis-story__legacy-shot {
+    width: 100%; /* Rasm to'liq kenglikni egallaydi */
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  /* Statistika qismi uchun */
+  .genesis-story__metric-bar {
+    flex-wrap: wrap; /* Elementlar qator sig'masa pastga tushadi */
+    padding-top: 20px;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .genesis-story__metric-unit {
+    flex: 0 0 50%; /* Har bir blok 50% kenglikda (2 tadan yonma-yon) */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .genesis-story__tally {
+    font-size: 70px; /* Raqamlar kattaligini kichraytiramiz */
+  }
+
+  .genesis-story__subject {
+    font-size: 20px;
+  }
+
+  .genesis-story__chronicle {
+    display: none;
+  }
+
+  .site-footer  {
+    height: 1270px;
+  }
+
+  .map-section {
+    margin-top: 80px;
+   }
+
 }
