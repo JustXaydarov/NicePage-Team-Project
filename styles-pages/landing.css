@@ -1018,6 +1018,10 @@ ul {
     background-color: #7a9cbd;
 }
 
+.team-section__title{
+    font-family: "sans-serif";
+}
+
 .footer-cards {
     display: flex;
     justify-content: center;
