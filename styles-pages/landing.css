@@ -427,11 +427,6 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
-}
-
-.testimonials__card:hover {
-    transform: translateY(-10px); /* Elegant effekt */
 }
 
 .testimonials__icon {
@@ -509,6 +504,9 @@ ul {
     font-family: "Montserrat";
 }
 
+.projects-section__title-resp {
+    display: none;
+}
 
 .projects-section {
     width: 100%;
