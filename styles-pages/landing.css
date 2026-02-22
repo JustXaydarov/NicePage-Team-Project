@@ -1112,3 +1112,89 @@ ul {
     text-decoration: underline;
 }
 
+/* our team html */
+
+.our-team-html {
+    font-size: 70px;
+    font-weight: 500;
+    font-family: serif;
+    text-align: center;
+    margin-bottom: 90px;
+    position: relative;
+    top: 60px;
+}
+
+.our-team-subtitle {
+    font-size: 18px;
+    text-align: center;
+    text-align-last: center;
+    font-family: "Montserrat";
+    line-height: 2.0;
+    font-weight: 500;
+}
+
+.our-html-btn-hero {
+    position: relative;
+    top: 30px;
+    background-color: transparent;
+    letter-spacing: 2px;
+    font-weight: 550;
+}
+
+.our-team-hero-left {
+    position: relative;
+    top: -140px;
+}
+
+.our-team-title-bottom {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 270px;
+    font-family: "serif";
+}
+
+.our-team-title-bottom-subtitle {
+    font-size: 23px;
+    margin-top: 30px;
+    text-align: center;
+    text-align-last: center;
+    font-family: "Montserrat";
+    line-height: 2.0;
+    font-weight: 450;
+}
+
+.our-html-btn-hero-2 {
+    top: 50px;
+    position: relative;
+    left: 650px;
+    background-color: transparent;
+     letter-spacing: 2px;
+    font-weight: 550;
+}
+
+.team-our-html5 {
+    position: relative;
+    top: 100px;
+}
+
+.site-footer-our {
+    position: relative;
+    top: 100px;
+}
+
+.body-our {
+    background-color: #F0F4F8;
+}
+
+.header-our {
+    background-color: #fff;
+}
+
+.hero-section-our-team {
+    background-color: #fff;
+    width: 100%;
+    height: 600px;
+  
+}
+
+
