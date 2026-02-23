@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
@@ -19,6 +20,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 ul {
@@ -52,40 +59,57 @@ ul {
 
 .hero {
   width: 100%;
-  height: 586px;
   background-color: #f0f4f8;
+  padding: 80px 0;
 }
 
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE */
 .hero__image-container {
-  padding-top: 130px;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.hero__image-container img {
-  width: 1200px;
-  height: 693px;
+.hero__image {
+  width: 100%;
+  height: auto;
   border-radius: 40px;
+  display: block;
 }
 
+/* CONTENT */
 .hero__content {
   text-align: center;
-  padding-top: 110px;
+  padding-top: 80px;
+  max-width: 1200px; /* 800 o‘rniga */
+  width: 100%;
+  margin: 0 auto;
 }
-.hero__content .hero__title {
+
+.hero__title {
   font-size: 60px;
   font-weight: 500;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
-.hero__content .hero__text {
+
+.hero__text {
   font-size: 19px;
   font-weight: 500;
   color: #111111;
-  line-height: 38px;
+  line-height: 1.8;
 }
-.hero__content .hero__button-wrapper {
-  padding: 30px;
+
+.hero__button-wrapper {
+  padding-top: 40px;
 }
-.hero__content .hero__button-wrapper .hero__button {
-  padding: 22px 57px;
+
+.hero__button {
+  padding: 18px 50px;
   font-size: 16px;
   font-weight: 600;
   color: #111;
@@ -93,17 +117,18 @@ ul {
   background-color: transparent;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.3s;
 }
-.hero__content .hero__button-wrapper .hero__button:hover {
+
+.hero__button:hover {
   background-color: #7a9cbd;
   color: #fff;
 }
 
 .performance {
   width: 100%;
-  height: 676px;
   background-color: #f0f4f8;
+  padding: 100px 0;
 }
 
 .performance__container {
@@ -113,17 +138,21 @@ ul {
 }
 
 .performance__card {
-  width: 527px;
-  height: 483px;
+  width: 100%;
+  max-width: 527px;
+  height: auto;
   text-align: center;
   border-radius: 40px;
   background-color: #fff;
+  overflow: hidden;
 }
 .performance__card .performance__card-image {
-  width: 527px;
-  height: 293px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  display: block;
 }
 .performance__card .performance__card-title {
   font-size: 22px;
@@ -313,7 +342,7 @@ ul {
   height: 326px;
   padding: 30px;
   border-radius: 30px;
-  border: 3px solid #D9D9D9;
+  border: 3px solid #d9d9d9;
 }
 .why__card .why__card-title {
   font-size: 25px;
@@ -358,11 +387,12 @@ ul {
   flex: 1;
 }
 .problem-solving-section .image-wrapper img {
-  width: 530px;
+  width: 100%;
+  max-width: 530px;
   height: 657px;
+  object-fit: cover;
   border-radius: 30px;
   display: block;
-  object-fit: cover;
 }
 .problem-solving-section .text-wrapper {
   flex: 1;
@@ -556,7 +586,8 @@ ul {
   color: #fff;
 }
 
-.hero, .performance {
+.hero,
+.performance {
   height: auto !important;
   min-height: 586px;
   padding-bottom: 100px;
@@ -598,130 +629,121 @@ ul {
   text-decoration: underline;
 }
 
-@media (max-width: 575px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-  ul {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .hero__title {
-    font-size: 30px !important;
-    padding: 20px 0;
-  }
-  .hero__text {
-    font-size: 15px !important;
-    line-height: 26px;
-  }
-  .hero__button {
-    padding: 14px 28px;
-    font-size: 14px;
+/* ========================================================
+   FULL RESPONSIVE MEDIA QUERIES
+   ======================================================== */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
   }
   .performance__container,
-  .healthy__cards,
   .why__container,
   .unique__container {
+    gap: 40px;
+  }
+  .testimonials-slider .nav-arrow.prev-arrow {
+    left: 10px;
+  }
+  .testimonials-slider .nav-arrow.next-arrow {
+    right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .hero__title {
+    font-size: 45px;
+  }
+  .performance__container,
+  .why__container,
+  .unique__container,
+  .problem-solving-section .layout-grid {
     flex-direction: column;
+    text-align: center;
     align-items: center;
-    gap: 24px;
-    padding: 0 15px;
   }
   .performance__card,
-  .healthy__card,
-  .why__card {
+  .why__content,
+  .image-wrapper img {
     width: 100%;
-    padding: 20px;
+    max-width: 550px;
+    height: auto;
+    margin: 0 auto;
   }
-  .testimonial-card {
-    flex: 0 0 280px;
-  }
-  .nav-arrow {
-    display: none;
-  }
-  .footer {
-    padding: 30px 0;
-    font-size: 14px;
+  .why__content {
+    padding-top: 0;
   }
 }
-@media (min-width: 576px) and (max-width: 767px) {
-  .hero__title {
-    font-size: 36px;
-  }
-  .hero__text {
-    font-size: 16px;
-    line-height: 28px;
-  }
-  .performance__card,
-  .healthy__card,
-  .why__card {
-    width: 100%;
-  }
-  .testimonial-card {
-    flex: 0 0 300px;
-  }
+@media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 18px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .hero__title {
-    font-size: 42px;
-  }
-  .performance__container,
-  .healthy__cards,
-  .why__container,
-  .unique__container {
-    gap: 40px;
-  }
-  .testimonial-card {
-    flex: 0 0 320px;
-  }
-  .problem-solving-section .layout-grid {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .why__card-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .hero__title {
-    font-size: 42px;
-  }
-  .performance__container,
-  .healthy__cards,
-  .why__container,
-  .unique__container {
-    gap: 40px;
-  }
-  .testimonial-card {
-    flex: 0 0 320px;
-  }
-  .problem-solving-section .layout-grid {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .why__card-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .hero__image-container img,
-  .performance__card,
-  .healthy__card,
-  .why__card,
-  .testimonial-card {
-    width: 90%;
+    padding: 15px 0;
   }
   nav ul {
-    justify-content: center;
-    gap: 26px;
+    display: none;
   }
+  nav .menu-toggle {
+    display: block;
+  }
+  .healthy__title {
+    font-size: 32px !important;
+  }
+  .healthy__cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .healthy__card {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+  }
+  .why__card-wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .problem-solving-section .text-wrapper .features-column .feature-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .testimonials-slider .slider-title {
+    font-size: 32px;
+  }
+  .testimonials-slider .nav-arrow {
+    display: none;
+  }
+  .testimonials-slider .testimonial-card {
+    flex: 0 0 300px;
+  }
+}
+@media (max-width: 576px) {
   .hero__title {
-    font-size: 54px;
+    font-size: 30px;
+  }
+  .performance__title,
+  .healthy__title,
+  .why__title,
+  .main-heading,
+  .unique__title {
+    font-size: 26px !important;
+    line-height: 1.3;
+  }
+  .hero__button,
+  .performance__button,
+  .healthy__button,
+  .why__link,
+  .unique__button {
+    padding: 14px 30px;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+  }
+  .hero__text, .performance__text, .why__text, .unique__text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .footer {
+    padding: 40px 0;
+  }
+  .footer__text {
+    font-size: 14px;
   }
 }
 
