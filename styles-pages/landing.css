@@ -84,7 +84,7 @@ nav {
 ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 15px;
   
   }
 
@@ -92,6 +92,10 @@ ul {
       margin-left: 20px;
 
      
+    }
+
+    .hero-core1 {
+        display: none;
     }
 
 .list a:focus {
@@ -129,6 +133,10 @@ ul {
 .hero-section {
     background-color: #F0F4F8;
     height: 700px;
+}
+
+.hero-button-resp {
+    display: none;
 }
 
 .hero-title {
@@ -184,7 +192,7 @@ ul {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    
     gap: 30px;
     margin-top: -70px;
 }
@@ -230,25 +238,36 @@ ul {
     color: #808080;
     line-height: 2.0;
 }
-
 .ourstory {
     width: 100%;
-    height: 700px;
+    /* height: 700px; o'rniga padding ishlatsak, kontentga qarab o'zi kengayadi */
     background-color: #F0F4F8;
     margin-top: 70px;
+    padding: 70px 0; /* Ichki bo'shliq */
 }
 
-.right-story-page img{
-    width: 500px;
-    height: 500px;
-    margin-top: 100px;
+/* Container ichini flex qilamiz */
+.ourstory .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Rasm va matn orasidagi masofa */
+    flex-wrap: wrap; /* Ekran toraysa matn pastga tushadi */
+}
+
+.right-story-page img {
+    width: 100%;
+    max-width: 500px; /* Kattalashib ketmasligi uchun */
+    height: auto;     /* Rasm proporsiyasini saqlash uchun */
     border-radius: 30px;
+    display: block;
+    position: relative;
+    left: -100px;
 }
 
 .left-story-page {
-    position: relative;
-    left: 650px;
-    top: -450px;
+    position: static; /* position va top/left ni o'chirib tashlaymiz */
+    max-width: 500px;
 }
 
 .our-story-title {
@@ -259,7 +278,7 @@ ul {
     font-size: 17px;
     font-weight: 400;
     line-height: 2.0;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     margin-top: 20px;
 }
 
@@ -267,31 +286,33 @@ ul {
     width: 230px;
     height: 60px;
     border-radius: 30px;
-    padding: 20px 40px;
+    /* padding: 20px 40px; Bu tugma ichini buzishi mumkin, shuning uchun display flex qo'shish kerak */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid #7A9CBD;
     background-color: transparent;
     font-weight: 600;
     letter-spacing: 2px;
     margin-top: 30px;
     transition: 0.2s;
+    cursor: pointer;
 }
 
-.ourstory-btn:hover{
+.ourstory-btn:hover {
     background-color: #7A9CBD;
     color: var(--bg-light);
 }
-
 .agency-section__grid {
     display: grid;
-    /* 1200px container uchun: 380px * 3 + 30px * 2 gap = 1200px */
-    grid-template-columns: repeat(3, 380px);
+    /* 380px o'rniga minmax ishlatamiz, bu gridni buzmaydi */
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
     gap: 30px;
     justify-content: center;
     grid-template-areas: 
         "img1 planning img3"
         "buildings img2 projects";
 }
-
 /* Grid Area bog'lanmalari */
 .agency-section__item--img1      { grid-area: img1; }
 .agency-section__item--buildings { grid-area: buildings; }
@@ -299,6 +320,14 @@ ul {
 .agency-section__item--img2      { grid-area: img2; }
 .agency-section__item--img3      { grid-area: img3; }
 .agency-section__item--projects  { grid-area: projects; }
+
+.agency-section__item {
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%; /* 380px o'rniga 100% */
+}
+
+
 
 /* Umumiy element stili */
 .agency-section__item {
@@ -402,11 +431,6 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
-}
-
-.testimonials__card:hover {
-    transform: translateY(-10px); /* Elegant effekt */
 }
 
 .testimonials__icon {
@@ -484,6 +508,9 @@ ul {
     font-family: "Montserrat";
 }
 
+.projects-section__title-resp {
+    display: none;
+}
 
 .projects-section {
     width: 100%;
@@ -734,7 +761,7 @@ ul {
 
 /* Section va Sarlavha */
 .team-section {
-  padding: 80px 0;
+  padding: 80px 0px;
   background-color: #F0F4F8;
   text-align: center;
 }
@@ -751,15 +778,10 @@ ul {
   background: #ffffff;
   border-radius: 40px;
   padding: 50px 50px;
-  margin: 15px; /* Slaydlar orasidagi masofa uchun */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
   width: 280px;
+  margin-left: -15px;
 }
 
-.team-card:hover {
-  transform: translateY(-10px);
-}
 
 .team-card__img {
   width: 160px;
@@ -794,8 +816,12 @@ ul {
 .team-card__icon {
   width: 20px;
   height: 20px;
-  fill: #000; /* SVG rangini boshqarish */
+  fill: #000; 
   transition: fill 0.3s;
+}
+
+.hero-subtitle-resp {
+  display: none;
 }
 
 .team-card__social-link:hover .team-card__icon {
@@ -810,7 +836,6 @@ ul {
   height: 50px !important;
 }
 
-/* Asosiy Konteyner */
 .genesis-story {
   padding: 80px 0;
   max-width: 1200px;
@@ -912,24 +937,30 @@ ul {
   color: #1a1a1a;
 }
 
+.genesis-story__chronicle-resp {
+    display: none;
+}
+
 .site-footer {
-    /* Sen bergan background yo'li va gradient */
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                 url('../assets/png/footer-background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Rasm qimirlamay turishi uchun, yanada zo'r ko'rinadi */
-    
-    /* Heightni padding orqali kattalashtirdik */
+    background-attachment: fixed; 
     padding: 50px 20px 60px 20px; 
     color: #fff;
     text-align: center;
     font-family: 'Arial', sans-serif;
+    height: 670px;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.menu {
+    display: none;
 }
 
 .footer-title {
@@ -940,13 +971,12 @@ ul {
     font-family: "sans-serif";
 }
 
-/* Form elementlari */
 .footer-form {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-bottom: 100px; /* Kartalardan uzoqlashtirish uchun */
+    margin-bottom: 100px; 
     flex-wrap: wrap;
     color: #7D7D7D;
 }
@@ -967,7 +997,7 @@ ul {
 }
 
 .f-submit {
-    background-color: rgb(162, 172, 190);
+    background-color: #9DB7D1;
     color: #fff;
     border: none;
     padding: 14px 50px;
@@ -982,7 +1012,10 @@ ul {
     background-color: #7a9cbd;
 }
 
-/* Kartalar stili */
+.team-section__title{
+    font-family: "sans-serif";
+}
+
 .footer-cards {
     display: flex;
     justify-content: center;
@@ -992,9 +1025,9 @@ ul {
 }
 
 .info-card {
-    background-color: #f1f4f9; /* Rasmdagi och kulrang/oq rang */
+    background-color: #f1f4f9; 
     padding: 30px 25px;
-    border-radius: 50px; /* Rasmdagi juda yumshoq burchaklar */
+    border-radius: 50px; 
     width: 350px;
     min-height: 150px;
     text-align: left;
@@ -1015,7 +1048,7 @@ ul {
 }
 
 .card-head h3 {
-    color: #7390a5; /* Rasmdagi ko'kimtir sarlavha rangi */
+    color: #7390a5; 
     margin: 0;
     font-size: 20px;
     letter-spacing: 1px;
@@ -1033,4 +1066,135 @@ ul {
     font-size: 17px;
     opacity: 0.9;
 }
+
+.map-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.map-section__container {
+    width: 100%;
+    line-height: 0;
+}
+
+.map-section__iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block; 
+}
+
+.map-section__content {
+    background-color: #333333;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    margin-top: -50px;
+}
+
+.map-section__text {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 14px;
+    position: relative;
+    top: 80px;
+}
+
+.map-section__text1 {
+    font-size: 10px;
+    margin-top: 150px;
+}
+
+.map-section__text1 a {
+    color: #9AC8DA;
+    text-decoration: underline;
+}
+
+/* our team html */
+
+.our-team-html {
+    font-size: 70px;
+    font-weight: 500;
+    font-family: serif;
+    text-align: center;
+    margin-bottom: 90px;
+    position: relative;
+    top: 60px;
+}
+
+.our-team-subtitle {
+    font-size: 18px;
+    text-align: center;
+    text-align-last: center;
+    font-family: "Montserrat";
+    line-height: 2.0;
+    font-weight: 500;
+}
+
+.our-html-btn-hero {
+    position: relative;
+    top: 30px;
+    background-color: transparent;
+    letter-spacing: 2px;
+    font-weight: 550;
+}
+
+.our-team-hero-left {
+    position: relative;
+    top: -140px;
+}
+
+.our-team-title-bottom {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 270px;
+    font-family: "serif";
+}
+
+.our-team-title-bottom-subtitle {
+    font-size: 23px;
+    margin-top: 30px;
+    text-align: center;
+    text-align-last: center;
+    font-family: "Montserrat";
+    line-height: 2.0;
+    font-weight: 450;
+}
+
+.our-html-btn-hero-2 {
+    top: 50px;
+    position: relative;
+    left: 650px;
+    background-color: transparent;
+     letter-spacing: 2px;
+    font-weight: 550;
+}
+
+.team-our-html5 {
+    position: relative;
+    top: 100px;
+}
+
+.site-footer-our {
+    position: relative;
+    top: 100px;
+}
+
+.body-our {
+    background-color: #F0F4F8;
+}
+
+.header-our {
+    background-color: #fff;
+}
+
+.hero-section-our-team {
+    background-color: #fff;
+    width: 100%;
+    height: 600px;
+  
+}
+
 

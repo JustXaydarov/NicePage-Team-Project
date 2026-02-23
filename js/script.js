@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   new Splide('#team-slider', {
     type   : 'loop',
     perPage: 4,
-    gap    : '20px',
+    gap    : '-30px',
     arrows : true,
     pagination: false,
     breakpoints: {
@@ -34,3 +34,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   engine.mount();
 });
+
+AOS.init();
